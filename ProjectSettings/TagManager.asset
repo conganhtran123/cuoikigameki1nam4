@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - playerBullet
+  - Enemy
+  - HpObject
+  - EnemyBullet
+  - ShieldObject
+  - Checkpoint
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: ground
+    uniqueID: 3611064147
+    locked: 0
+  - name: rock
+    uniqueID: 2107596683
+    locked: 0
+  - name: grass
+    uniqueID: 3720757301
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: player
+    uniqueID: 2810746143
+    locked: 0
+  - name: playerBullet
+    uniqueID: 232267483
+    locked: 0
+  - name: gun
+    uniqueID: 2272066385
+    locked: 0
+  - name: blood
+    uniqueID: 3132160579
+    locked: 0
+  - name: enemy
+    uniqueID: 1016542407
+    locked: 0
+  - name: hpbar
+    uniqueID: 4193630809
+    locked: 0
+  - name: hpObject
+    uniqueID: 3765762629
+    locked: 0
