@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private Transform firePos;
     [SerializeField] private float shotDelay = 0.5f;
     private float nextShot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +50,8 @@ public class Gun : MonoBehaviour
         {
             nextShot = Time.time + shotDelay;
             Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            AudioManager.Instance.PlayShootSound();
         }
+        
     }
 }

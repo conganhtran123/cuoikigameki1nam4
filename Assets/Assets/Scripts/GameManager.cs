@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        
     }
 
     // ---- Quản lý điểm ----

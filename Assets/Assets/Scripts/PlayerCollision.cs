@@ -9,7 +9,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private float damage = 10f;
     [SerializeField] private GameObject gameWin;
 
-
+    
     private void Start()
     {
         gameWin.SetActive(false);
@@ -22,7 +22,10 @@ public class PlayerCollision : MonoBehaviour
             if (player != null)
             {
                 player.Heal(healAmount); // Heal the player by 20 health points
+                AudioManager.Instance.PlayEnergySound();
+                Destroy(other.gameObject);
             }
+            
         }
 
         if (other.CompareTag("EnemyBullet"))
@@ -33,6 +36,7 @@ public class PlayerCollision : MonoBehaviour
                 player.takeDamage(damage);
                 Destroy(other.gameObject);
             }
+            
         }
         if (other.CompareTag("ShieldObject"))
         {
@@ -41,7 +45,9 @@ public class PlayerCollision : MonoBehaviour
             {
                 player.StartCoroutine(player.Shield());
                 Destroy(other.gameObject);
+                AudioManager.Instance.PlayEnergySound();
             }
+            
         }
         if (other.CompareTag("Checkpoint"))
         {
@@ -51,7 +57,6 @@ public class PlayerCollision : MonoBehaviour
                 Debug.Log("Checkpoint reached!");
                 Destroy(other.gameObject);
                 gameWin.SetActive(true);
-
             }
         }
     }
