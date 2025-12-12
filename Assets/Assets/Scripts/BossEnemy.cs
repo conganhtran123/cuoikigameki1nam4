@@ -13,6 +13,8 @@ public class BossEnemy : Enemy
     private float nextSkillTime = 0f;
 
     [SerializeField] private GameObject checkPoint;
+
+    [SerializeField] private int scoreBossEnemy = 50;
     protected override void Update()
     {
         base.Update();
@@ -27,6 +29,10 @@ public class BossEnemy : Enemy
         if (checkPoint != null)
         {
             Instantiate(checkPoint, transform.position, Quaternion.identity);
+        }
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(scoreBossEnemy);
         }
         base.Die();
     }

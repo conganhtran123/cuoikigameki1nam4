@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour, IPointerDownHandler
             SceneManager.LoadScene("Home");
             Time.timeScale = 1f; // Đảm bảo thời gian được đặt lại về bình thường
         }
-        else if (gameObject.name == "NextLevel")
+        else if (gameObject.name == "Nextlevel")
         {
             // Lấy tên scene hiện tại
             string currentSceneName = SceneManager.GetActiveScene().name;
@@ -33,11 +33,12 @@ public class MenuManager : MonoBehaviour, IPointerDownHandler
             {
                 SceneManager.LoadScene(nextSceneName);
             }
+
             else
-            {
-                Debug.Log("Không có cấp độ tiếp theo. Hoặc bạn đã hoàn thành tất cả các cấp độ!");
-                // Bạn có thể thêm logic để xử lý khi không còn cấp độ nào nữa
-            }
+        {
+            Debug.Log("Không có cấp độ tiếp theo. Hoặc bạn đã hoàn thành tất cả các cấp độ!");
+            // Bạn có thể thêm logic để xử lý khi không còn cấp độ nào nữa
+        }
         }
         else if (gameObject.name == "Startgame")
         {

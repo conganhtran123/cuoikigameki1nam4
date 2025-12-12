@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Color colorNormal;
 
     [SerializeField] private GameObject gameOver;
+    
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         gameOver.SetActive(false);
+        
         currentHP = maxHP;
         updateHPBar();
     }

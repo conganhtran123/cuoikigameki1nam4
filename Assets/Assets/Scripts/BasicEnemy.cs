@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
+    [SerializeField] private int scoreBasicEnemy = 10;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
@@ -24,5 +25,14 @@ public class BasicEnemy : Enemy
                 player.takeDamage(stayDamage);
             }
         }
+    }
+
+    protected override void Die()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(scoreBasicEnemy);
+        }
+        base.Die();
     }
 }

@@ -7,6 +7,13 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private float healAmount = 20f;
     [SerializeField] private float damage = 10f;
+    [SerializeField] private GameObject gameWin;
+
+
+    private void Start()
+    {
+        gameWin.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("HpObject"))
@@ -43,6 +50,8 @@ public class PlayerCollision : MonoBehaviour
             {
                 Debug.Log("Checkpoint reached!");
                 Destroy(other.gameObject);
+                gameWin.SetActive(true);
+
             }
         }
     }
